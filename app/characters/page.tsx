@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { fetchCharacters } from "../../lib/marvelApi";
 import { useFavorites } from "../context/FavoritesContext";
-import { motion } from "framer-motion"; // Importa Framer Motion
+import { motion } from "framer-motion"; 
 
 export default function CharactersPage() {
   const [characters, setCharacters] = useState<any[]>([]);
@@ -69,7 +69,7 @@ export default function CharactersPage() {
                 <h2 className="text-lg font-bold">{character.name}</h2>
                 <button
                   onClick={(e) => {
-                    e.stopPropagation(); // Evita navegação ao clicar no botão
+                    e.stopPropagation(); 
                     toggleFavorite(character);
                   }}
                   className={`p-2 rounded-full transition ${
@@ -86,7 +86,7 @@ export default function CharactersPage() {
         })}
       </motion.div>
 
-      {/* Controles de Paginação */}
+      {}
       <div className="flex justify-center mt-6 space-x-4">
         <button
           onClick={() => setPage((prev) => Math.max(prev - 1, 1))}

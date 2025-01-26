@@ -35,7 +35,7 @@ export const fetchCharacters = async (offset = 0, limit = 20) => {
   }
 
   const data = await response.json();
-  return data.data.results; // Retorna apenas os personagens
+  return data.data.results; 
 };
 
 /**
@@ -53,5 +53,5 @@ export const fetchCharacterDetails = async (id: string) => {
   }
 
   const data = await response.json();
-  return data.data.results[0]; // Retorna o primeiro (e único) resultado
+  return data.data.results[0];
 };
